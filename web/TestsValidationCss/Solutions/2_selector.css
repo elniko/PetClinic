@@ -4,7 +4,7 @@
 }
 
 /* Solution : colorier les pairs */
-#exo2 li:nth-child(odd) {
+#exo2 li:nth-child(even) {
     background-color: green;
 }
 
