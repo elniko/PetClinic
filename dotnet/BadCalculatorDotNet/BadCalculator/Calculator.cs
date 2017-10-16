@@ -20,11 +20,11 @@ namespace BadCalculator
         {
             int opsi = input.IndexOf(' ');
             int opei = input.LastIndexOf(' ');
-            String operation = input.Substring(opsi + 1, opei);
+            String operation = input.Substring(opsi + 1, opei - opsi).Trim();
 
             //System.out.println("_" + operation + "_");
 
-            if (operation == "plus")
+            if (operation.Trim() == "plus")
             {
                 Console.WriteLine("Plus");
                 return Int32.Parse(input.Substring(0, input.IndexOf(' '))) + Int32.Parse(input.Substring(input.LastIndexOf(' ') + 1));
