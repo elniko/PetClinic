@@ -1,6 +1,6 @@
-describe('This', function(){
+describe('This', () => {
 
-    it("This - 1", function () {
+    it("This - 1", () => {
         var person = {
             name: 'bob',
             intro: function () {
@@ -11,7 +11,7 @@ describe('This', function(){
     });
 
 
-    it("This - 2", function () {
+    it("This - 2", () => {
         var person = {
             name: 'bob',
             intro: function () {
@@ -27,7 +27,7 @@ describe('This', function(){
     });
 
 
-    it("This - 3", function () {
+    it("This - 3", () => {
         var person = {
             name: 'bob',
             intro: function () {

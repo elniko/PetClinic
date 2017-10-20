@@ -1,10 +1,10 @@
-describe('Reflection : ', function(){
+describe('Reflection : ', () =>{
 
-    it("Reflection - 1", function() {
+    it("Reflection - 1", () => {
         var keys = [];
         var values = [];
         var person = {name: 'Thierry LAU', age: 30, unemployed: true};
-        for(propertyName in person) {
+        for(const propertyName in person) {
             keys.push( _ );
             values.push( _);
         }
@@ -23,7 +23,7 @@ describe('Reflection : ', function(){
 
     B.prototype = new A();
 
-    it("Reflection - 2", function() {
+    it("Reflection - 2", () => {
         var b = new B();
 
         var keys = [];
@@ -43,10 +43,10 @@ describe('Reflection : ', function(){
         expect(ownKeys).toEqual( _ );
     });
 
-    it("Reflection - 3", function () {
+    it("Reflection - 3", () => {
         var a = new A();
         var b = new B();
-        expect(typeof(a.constructor)).toBe( _ );
+        expect(typeof a.constructor).toBe( _ );
         expect(a.constructor.name).toBe( _ );
         expect(b.constructor.name).toBe( _ );
     });

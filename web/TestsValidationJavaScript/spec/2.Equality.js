@@ -1,42 +1,42 @@
-describe('Equality', function(){
+describe('Equality', () => {
 
-    it('Equality - 1', function(){
+    it('Equality - 1', () => {
         expect(3 + 7 == 10).toBe( _ );
     });
 
-    it('Equality - 2', function(){
+    it('Equality - 2', () => {
         expect(3 + 7 == "10").toBe( _ );
     });
 
-    it('Equality - 3', function(){
+    it('Equality - 3', () => {
         expect(3 + 7 === 10).toBe( _ );
     });
 
-    it('Equality - 4', function(){
+    it('Equality - 4', () => {
         expect(3 + 7 === "10").toBe( _ );
     });
 
-    it('Equality - 5', function(){
+    it('Equality - 5', () => {
         expect("3" + "7" == "37").toBe( _ );
     });
 
-    it('Equality - 6', function(){
+    it('Equality - 6', () => {
         expect("3" + "7" == 37).toBe( _ );
     });
 
-    it('Equality - 7', function(){
+    it('Equality - 7', () => {
         expect("3" + "7" === "37").toBe( _ );
     });
 
-    it('"3" + "7" === 37', function(){
+    it('"3" + "7" === 37', () => {
         expect("3" + "7" === 37).toBe( _ );
     });
 
-    it('"3" + 7 == "37"', function(){
+    it('"3" + 7 == "37"', () => {
         expect("3" + 7 == "37").toBe( _ );
     });
 
-    it('"3" + 7 === 37', function(){
+    it('"3" + 7 === 37', () => {
         expect("3" + 7 === 37).toBe( _ );
     });
 

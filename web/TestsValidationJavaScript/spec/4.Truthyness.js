@@ -1,6 +1,6 @@
-describe('Truthyness', function(){
+describe('Truthyness', () => {
 
-    it('Truthyness - 1', function(){
+    it('Truthyness - 1', () => {
         var result;
         if(3){
             result = true;
@@ -10,7 +10,7 @@ describe('Truthyness', function(){
         expect(result).toBe( _ );
     });
 
-    it('Truthyness - 2', function(){
+    it('Truthyness - 2', () => {
         var result;
         if(-1){
             result = true;
@@ -20,7 +20,7 @@ describe('Truthyness', function(){
         expect(result).toBe( _ );
     });
 
-    it('Truthyness - 3', function(){
+    it('Truthyness - 3', () => {
         var result;
         if(0){
             result = true;
@@ -30,7 +30,7 @@ describe('Truthyness', function(){
         expect(result).toBe( _ );
     });
 
-    it('Truthyness - 4', function(){
+    it('Truthyness - 4', () => {
         var result;
         if(null){
            result = true;
@@ -40,9 +40,19 @@ describe('Truthyness', function(){
         expect(result).toBe( _ );
     });
 	
-	it('Truthyness - 5', function(){
+	it('Truthyness - 5', () => {
         var result;
         if(undefined){
+           result = true;
+        } else {
+            result = false;
+        }
+        expect(result).toBe( _ );
+    });
+
+	it('Truthyness - 6', () => {
+        var result;
+        if(new Boolean(false)){
            result = true;
         } else {
             result = false;
