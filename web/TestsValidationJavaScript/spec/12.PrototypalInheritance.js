@@ -5,13 +5,13 @@ describe('Prototype inheritance', () => {
     }
 
     Mammal.prototype = {
-        sayHi: function() {
+        sayHi() {
             return "Hello, my name is " + this.name;
         }
     };
 
     it("Prototype inheritance - 1", () => {
-        var eric  = new Mammal("Eric");
+        var eric = new Mammal("Eric");
         expect(eric.sayHi()).toBe( _ );
     });
 
@@ -21,19 +21,22 @@ describe('Prototype inheritance', () => {
 
     it("Prototype inheritance - 2", () => {
         var bobby = new Mammal("Bobby");
+        expect(eric.favouriteSaying()).toBe( _ );
         expect(bobby.favouriteSaying()).toBe( _ );
     });
 
     it("Prototype inheritance - 3", () => {
         var paul = new Mammal("Paul");
-        Mammal.prototype.numberOfLettersInName = function() {
-            return this.name.length;
-        };
-        expect(paul.numberOfLettersInName()).toBe( _ );
+        Object.defineProperty(Mammal.prototype, 'numberOfLettersInName', {
+            get: function () {
+                return this.name.length;
+            }
+        });
+        expect(paul.numberOfLettersInName).toBe( _ );
     });
 
     function extend(child, supertype){
-        child.prototype = supertype.prototype;
+        child.prototype = Object.create(supertype.prototype);
     }
 
     function Bat(name, wingspan) {
