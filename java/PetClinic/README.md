@@ -11,17 +11,17 @@ A vous de les corriger et de faire tout ce qui vous semble nécessaire pour que 
 
 1- Commencer par l'exécution des tests unitaires sur tout le projet
 Quelques tests en erreur...  
-Le candidat doit être capable de lire la stack et de voir qu'il manque l'annotation @ContextConfiguration à la classe VetIntegrationTest
+Le candidat doit être capable de lire la stack et de voir qu'il manque l'annotation ```@ContextConfiguration``` à la classe VetIntegrationTest
 
 2- Exécution 2:
 
 La méthode findPetEntries doit être implémentée	
-Implémenter la méthode findPetEntries --> Le candidat doit reconnaitre la pagination et penser à regarder l'API
+Implémenter la méthode ```findPetEntries``` --> Le candidat doit reconnaitre la pagination et penser à regarder l'API
 
 3- Exécution 3:
 
-La méthode findPetsByTypeAndNameLike doit être implémentée
-Le candidat doit se rendre compte du like et surtout à l'emplacement des %.
+La méthode ```findPetsByTypeAndNameLike``` doit être implémentée
+Le candidat doit se rendre compte du like et surtout à l'emplacement des **%**.
 
 4- Exécution 4:
 
@@ -37,7 +37,8 @@ Expliquer au candidat qu'il y a deux serveurs configurés au niveau du pom du pr
 Voir si le candidat connait mvn tomcat:run ou mvn jetty:run sinon le faire pour lui pour avancer.
 
 7- Essayer de créer les différentes entités --> Exception lors de la création du pet.
-	Après la modification de la classe PetController, le test PetControllerTest échouera, il faut le modifier avant de redéployer
+	Le test de PetControllerTest a été modifié pour voir si le candidat sait comment les **when** fonctionnent. Ici pas besoin de **verify**, le **when** casse dès lors qu'il n'est pas appelé avec les bon paramètres.
+	Ici il faut changer ```when(mockPetDao.findPet(1L)).thenReturn(expectedPet);``` en ```when(mockPetDao.findPet(-1L)).thenReturn(expectedPet);``` pour solutionner l'incident. 
 
 8- Eventuellement demander au candidat de dessiner le diagramme de classe des entités de l'application.
 

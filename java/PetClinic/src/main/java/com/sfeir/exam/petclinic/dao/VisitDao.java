@@ -66,7 +66,7 @@ public class VisitDao {
     }
 
     public Query findVisitsByDescriptionAndVisitDate(String description, Date visitDate) {
-        throw new UnsupportedOperationException("to be implemented");
+    	throw new UnsupportedOperationException("to be implemented");
     }
 
     public Query findVisitsByVisitDateBetween(Date minVisitDate, Date maxVisitDate) {
