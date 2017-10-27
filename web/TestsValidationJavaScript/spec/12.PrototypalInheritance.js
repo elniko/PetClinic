@@ -15,8 +15,8 @@ describe('Prototype inheritance', () => {
         expect(eric.sayHi()).toBe( _ );
     });
 
-    Mammal.prototype.favouriteSaying = () => {
-        return this.name + "'s favourite saying is " + this.sayHi();
+    Mammal.prototype.favouriteSaying = function() {
+        return `${this.name}'s favourite saying is ${this.sayHi()}`;
     };
 
     it("Prototype inheritance - 2", () => {
@@ -28,7 +28,7 @@ describe('Prototype inheritance', () => {
     it("Prototype inheritance - 3", () => {
         var paul = new Mammal("Paul");
         Object.defineProperty(Mammal.prototype, 'numberOfLettersInName', {
-            get: function () {
+            get() {
                 return this.name.length;
             }
         });
