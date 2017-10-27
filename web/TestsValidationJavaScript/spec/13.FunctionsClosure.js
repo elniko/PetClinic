@@ -31,9 +31,9 @@ describe('Functions and Closure', () => {
 
 
     it("Functions and Closure - 4", () => {
-        function add() {
+        function add(...args) {
             var total = 0;
-            for(let i = 0; i < arguments.length; i++) {
+            for(const arg of args) {
                 // complete the implementation of this method so that it returns the sum of its arguments
                // _
             }

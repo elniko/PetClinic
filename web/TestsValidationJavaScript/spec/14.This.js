@@ -3,7 +3,7 @@ describe('This', () => {
     it("This - 1", () => {
         var person = {
             name: 'bob',
-            intro: function () {
+            intro() {
                 return "Hello, my name is " + _;
             }
         };
@@ -14,7 +14,7 @@ describe('This', () => {
     it("This - 2", () => {
         var person = {
             name: 'bob',
-            intro: function () {
+            intro() {
                 return "Hello, my name is " + this.name;
             }
         };
@@ -30,7 +30,7 @@ describe('This', () => {
     it("This - 3", () => {
         var person = {
             name: 'bob',
-            intro: function () {
+            intro() {
                 return "Hello, my name is " + this.name;
             }
         };
