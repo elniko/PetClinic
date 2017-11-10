@@ -1,13 +1,13 @@
-describe('Scopes', function(){
+describe('Scopes', () => {
 
     variable = 42;
 
-    it("Scopes - 1", function() {
+    it("Scopes - 1", () => {
         expect(variable).toBe( _ );
     });
 
 
-    it("Scopes - 2", function() {
+    it("Scopes - 2", () => {
         var fruit = "banana";
 
         (function() {
@@ -17,7 +17,7 @@ describe('Scopes', function(){
         })();
 
         expect(fruit).toBe( _ );
-        expect(typeof(anotherFruit)).toBe( _ );
+        expect(typeof anotherFruit).toBe( _ );
     });
 
 });

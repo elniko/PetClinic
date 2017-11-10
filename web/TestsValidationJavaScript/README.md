@@ -2,7 +2,7 @@
 
 ## Principe
 Ces tests sont rédigés avec le framework de test Jasmine.
-Il y en a 48 répartis dans 16 fichiers (1 par thème) :
+Il y en a 87 répartis dans 16 fichiers (1 par thème) :
 
 * 0.Asserts.js
 * 1.Variables.js

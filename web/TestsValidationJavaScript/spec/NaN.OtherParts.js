@@ -1,13 +1,13 @@
-describe('JavaScript: The Other Parts', function() {
+describe('JavaScript: The Other Parts', () => {
 
-    it("Bonus 1: scope extra", function() {
+    it("Bonus 1: scope extra", () => {
         //_ (Math)
         {
             expect( cos(PI) ).toBe( -1 );
         }
     });
 
-    it("Bonus 2: syndrome des points-virgules", function() {
+    it("Bonus 2: syndrome des points-virgules", () => {
         function f() {
             return
                 "done";
@@ -15,31 +15,34 @@ describe('JavaScript: The Other Parts', function() {
         expect( f() ).toBe( _ );
     });
 
-    it("Bonus 3: décalage horaire", function() {
+    it("Bonus 3: décalage horaire", () => {
         var aujourdhui = new Date(2017, _, 22);
         expect(aujourdhui.toLocaleDateString()).toBe("22/09/2017");
     });
 
-    it("Bonus 4: l'épouvantail de Crockford", function() {
-        with({Math: {cos: x => x + "zza", PI: "pi"}})
+    it("Bonus 4: l'épouvantail de Crockford", () => {
+        var edibleMath = {cos: x => x + "zza", PI: "pi"}
+        with(edibleMath)
         {
-            with(self) with(Math) {
-                expect( cos(PI) ).toBe( _ );
-            }
+            expect( cos(PI) ).toBe( _ );
+            sin = x => x + "ment";
+            expect( sin(PI) ).toBe( _ );
         }
+        expect(typeof edibleMath.sin).toBe( _ );
     });
 
-    it("Bonus 5: je suis falsy… qui suis-je ?", function(){
+    it("Bonus 5: je suis falsy… qui suis-je ?", () =>{
         var thing = _ ;
         expect(thing).toBeFalsy();
         expect(+thing).toBe(0);
         expect(typeof thing).toBe( "object" );
     });
 
-    it("Bonus 6: je suis truthy… qui suis-je ?", function(){
+    it("Bonus 6: je suis truthy… qui suis-je ?", () =>{
         var thing = _ ;
         expect(thing).toBeTruthy();
         expect(+thing).toBe(0);
+        expect(String(thing).length).toBe(39);
         expect(typeof thing).toBe( "object" );
     });
 });

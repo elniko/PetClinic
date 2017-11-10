@@ -1,9 +1,9 @@
-describe('This', function(){
+describe('This', () => {
 
-    it("This - 1", function () {
+    it("This - 1", () => {
         var person = {
             name: 'bob',
-            intro: function () {
+            intro() {
                 return "Hello, my name is " + _;
             }
         };
@@ -11,10 +11,10 @@ describe('This', function(){
     });
 
 
-    it("This - 2", function () {
+    it("This - 2", () => {
         var person = {
             name: 'bob',
-            intro: function () {
+            intro() {
                 return "Hello, my name is " + this.name;
             }
         };
@@ -27,10 +27,10 @@ describe('This', function(){
     });
 
 
-    it("This - 3", function () {
+    it("This - 3", () => {
         var person = {
             name: 'bob',
-            intro: function () {
+            intro() {
                 return "Hello, my name is " + this.name;
             }
         };

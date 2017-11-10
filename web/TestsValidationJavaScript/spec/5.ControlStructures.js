@@ -1,6 +1,6 @@
-describe('Control structures', function(){
+describe('Control structures', () => {
 
-    it('Control structures - 1', function(){
+    it('Control structures - 1', () => {
         var result = false;
         if (2 > 0) {
             result = true;
@@ -8,12 +8,12 @@ describe('Control structures', function(){
         expect(result).toBe( _ );
     });
 
-    it('Control structures - 2', function(){
+    it('Control structures - 2', () => {
         var fruit = true ? "orange" : "banana";
         expect(fruit).toBe( _ );
     });
 
-    it('Control structures - 3', function(){
+    it('Control structures - 3', () => {
         var result = 0;
         switch (2) {
             case 1:
@@ -26,7 +26,7 @@ describe('Control structures', function(){
         expect(result).toBe( _ );
     });
 
-    it('Control structures - 4', function(){
+    it('Control structures - 4', () => {
         var result = "Pippin";
         switch ("m") {
             case "f":
@@ -42,7 +42,7 @@ describe('Control structures', function(){
         expect(result).toBe( _ );
     });
 
-    it('Control structures - 5', function(){
+    it('Control structures - 5', () => {
         var result = "Pippin";
         switch ("s") {
             case "f":
@@ -58,7 +58,7 @@ describe('Control structures', function(){
     });
 
 
-    it('Control structures - 6', function(){
+    it('Control structures - 6', () => {
         var fruit = null || "banana";
         expect(fruit).toBe( _ );
 
