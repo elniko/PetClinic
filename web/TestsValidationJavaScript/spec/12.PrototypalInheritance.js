@@ -10,8 +10,9 @@ describe('Prototype inheritance', () => {
         }
     };
 
+    var eric = new Mammal("Eric");
+
     it("Prototype inheritance - 1", () => {
-        var eric = new Mammal("Eric");
         expect(eric.sayHi()).toBe( _ );
     });
 
